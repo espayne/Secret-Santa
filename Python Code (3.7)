@@ -43,7 +43,7 @@ def SecretSanta(email_list = open("SS.txt", "r")):        #REQUIRES TEXT FILE CA
             msg['To'] = emails[i]
             msg['Subject']= 'Secret Santa'
             msg.attach(MIMEText(message,'plain'))
-            fp=open('SSJPEG.jpg','rb')
+            fp=open('SSJPEG.jpg','rb')                                      #THIS IS AN IMAGE I HAVE ATTACHED TO THE EMAILS, YOU MAY NOT WANT THIS
             msgImage=MIMEImage(fp.read())
             fp.close()
             msg.attach(msgImage)

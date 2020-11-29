@@ -1,3 +1,11 @@
+import smtplib
+import numpy as np
+from random import shuffle
+
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.image import MIMEImage
+
 SERVER CONNECTION
 
 s = smtplib.SMTP(host='smtp-mail.outlook.com', port = 587)

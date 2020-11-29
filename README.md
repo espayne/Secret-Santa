@@ -13,3 +13,5 @@ Email domain (I am using outlook 365) - this is because will require different s
 The format of emails - mine is FirstName.Surname@domain.com
 
 Perfect for Christmas time for friends or colleagues. It's a fun way to allocate.
+
+Let me know if you have any questions :)

@@ -24,9 +24,9 @@ def SecretSanta(email_list = open("SS.txt", "r")):        #REQUIRES TEXT FILE CA
         emails.append(x.split('\n')[0])                    #THIS IS FOR THE TEXT FILE
         
     number_from = list(np.arange(0,len(emails),1))
-    check = []
     while True:
-        failcount = 0
+        failcount = 0                                       #RESETTING CLAUSES FOR LOOP
+        check = []
         number_to = number_from[:]
         shuffle(number_to)
     
@@ -40,15 +40,15 @@ def SecretSanta(email_list = open("SS.txt", "r")):        #REQUIRES TEXT FILE CA
             break                                        #IF SOMEONE HAS GOT THEMSELVES THEN WE GO BACK TO THE WHILE LOOP 'CONTINUE' IF NOT THEN WE CARRY ON 'BREAK'
         continue
     
-    names_2 = list(zip(number_to, names))
-    names_2.sort()
-    names_to = [names for number_to, names in names_2]   #TO RE-ORDER THE LIST OF NAMES IN ORDER OF WHO FIRST EMAIL ADDRESS HAS BEEN ALLOCATED
+    emails_2 = list(zip(number_to, emails))
+    emails_2.sort()
+    emails_to = [emails for number_to, emails in emails_2]   #TO RE-ORDER THE LIST OF EMAILS IN ORDER OF WHICH NAMES HAVE BEEN ALLOCATED
     
     for i in range(len(emails)):                                                                               #TO LOOP THE EMAILS
             msg=MIMEMultipart()
-            message = 'You have been allocated to buy for............{}!'.format(names_to[i])
+            message = 'You have been allocated to buy for............{}!'.format(names[i])
             msg['From'] = sender
-            msg['To'] = emails[i]
+            msg['To'] = emails_to[i]
             msg['Subject']= 'Secret Santa'
             msg.attach(MIMEText(message,'plain'))
             fp=open('SSJPEG.jpg','rb')                                      #THIS IS AN IMAGE I HAVE ATTACHED TO THE EMAILS, YOU MAY NOT WANT THIS

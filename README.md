@@ -16,4 +16,6 @@ The format of emails - mine is FirstName.Surname@domain.com
 
 Perfect for Christmas time for friends or colleagues. It's a fun way to allocate.
 
+**Made a silly mistake, fixed as of 01/12
+
 :)
